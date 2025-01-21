@@ -1,0 +1,134 @@
+:root {
+  --color-primary: #1c1818;
+  --color-secondary: #665b5b; 
+  --color-accent: #1c1818;
+  --color-light: #F2E8C6  ; 
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  color: #000000;
+  background-color: var(--color-light);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box; /* Aseguramos que el padding y el border no afecten el tamaño de los elementos */
+}
+
+.section {
+  padding: 3rem 30%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+
+}
+
+.section-animate {
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding-top: 8rem; 
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.section-paragraph {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  color: var(--color-accent);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.highlighted-text {
+  color: var(--color-secondary); 
+}
+.contact-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: var(--color-secondary); /* Usa el color primario */
+  color: var(--color-light); /* Contraste claro */
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5rem 0; /* Espaciado entre párrafos */
+  font-size: 1rem; /* Ajuste de tamaño del texto */
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* Divide los elementos en extremos opuestos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  padding: 0 1rem; /* Añade espacio lateral */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Espaciado entre izquierda y derecha */
+  align-items: center; /* Centrado vertical */
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  gap: 1rem; /* Espaciado entre enlaces */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; /* Alinea los iconos verticalmente */
+  gap: 0.75rem; /* Espaciado entre iconos */
+}
+
+.nav-link {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.social-link {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
