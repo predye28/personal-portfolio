@@ -1,7 +1,9 @@
   import React from "react";
   import "../style/Style.css";
+  import { StaticImage } from "gatsby-plugin-image";
   import Header from "../components/Header";
   import Footer from "../components/Footer";
+  
 
 
   const IndexPage = () => (
@@ -9,7 +11,15 @@
       <Header />
 
       <section id="about" className="section">
-        <h1 className="section-title">Hi, Omar here</h1>
+        <h1 className="section-title">Hi, Omar here.</h1>
+        <StaticImage
+        src="../images/perfil.jpeg"
+        alt="Foto de perfil"
+        className="perfil-logo"
+        placeholder="blurred"
+        layout="fixed"
+        width={250} 
+      />
         <h2 className="section-subtitle">I create things every day.</h2>
         <p className="section-paragraph">
         Hi! I’m Omar  Madrigal a final-year Computer Engineering student at the Instituto Tecnológico de Costa Rica, 
@@ -24,8 +34,8 @@
         </h1>
       </section>
 
-      <section id= "skills">
-      <h3 className="section-subtitle">Technologies I Work With</h3>
+      <section id= "skills" className="section">
+        <h3 className="section-subtitle">Skills</h3>
         <p className="section-paragraph">
           python
           JavaScript (y frameworks como Node.js)

@@ -7,9 +7,9 @@ crear un portafolio donde no tengo experiencia laboral pero quiero mostrar mis c
 
 tendra:
 
-about
-proyects:
-skills:
-leave a messaje:
+- about
+- skills:
+- proyects:
+- leave a messaje:
 
 
