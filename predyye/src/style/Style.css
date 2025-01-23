@@ -157,6 +157,23 @@ body {
   transform: scale(1.1); 
 }
 
+.skills-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0rem;
+}
+
+.skills-icon {
+  width: 70px; 
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.skills-icon:hover {
+  transform: scale(1.1); 
+}
+
 
 
 /* RESPONSIVE */

@@ -40,29 +40,29 @@
             <div className="social-links">
               <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
                 <StaticImage
-                  src="../images/linkedin.png"
+                  src="../images/network/linkedin.png"
                   alt="LinkedIn"
                   className="social-icon"
                   placeholder="blurred"
-                  quality={90}
+                  quality={100}
                 />
               </a>
               <a href="https://github.com/predye28" target="_blank" rel="noopener noreferrer">
                 <StaticImage
-                  src="../images/github.png"
+                  src="../images/network/github.png"
                   alt="LinkedIn"
                   className="social-icon"
                   placeholder="blurred"
-                  quality={90}
+                  quality={100}
                 />
               </a>
               <a href="https://www.instagram.com/predyye/" target="_blank" rel="noopener noreferrer">
                 <StaticImage
-                  src="../images/instagram.png"
+                  src="../images/network/instagram.png"
                   alt="LinkedIn"
                   className="social-icon"
                   placeholder="blurred"
-                  quality={90}
+                  quality={100}
                 />
               </a>
             </div>
@@ -78,21 +78,79 @@
         </div>
       </section>
 
-
+      <br></br>
+      <br></br>
       <section id= "skills" className="section">
         <h3 className="section-title">Skills</h3>
-        <p className="section-paragraph">
-          python
-          JavaScript (y frameworks como Node.js)
-          React
-          MySQL
-          MongoDB
-          GitHub
-          Git
-          Figma
-        </p>
-      </section>
+        <div className="skills-links">
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/python.png"
+                alt="python"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/js.png"
+                alt="js"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/react.png"
+                alt="react"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/mysql.png"
+                alt="mysql"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/figma.png"
+                alt="figma"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/database.png"
+                alt="database"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+          <a target="_blank" rel="noopener noreferrer">
+              <StaticImage
+                src="../images/skills/git.png"
+                alt="git"
+                className="skills-icon"
+                placeholder="blurred"
+                quality={100}
+              />
+          </a>
+        </div>
 
+      </section>
+      <br></br>
+      <br></br>
       <section id="projects" className="section">
       <h2 className="section-title">Projects(falta ordenar y REDISENAR)</h2>
       <div className="section-paragraph">
