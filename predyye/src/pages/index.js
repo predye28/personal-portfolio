@@ -27,6 +27,7 @@
               placeholder="blurred"
               layout="fixed"
               width={250}
+              quality={100}
             />
             <h2 className="section-subtitle">I create things every day.</h2>
             <p className="section-paragraph">
@@ -36,7 +37,35 @@
             <p className="section-paragraph">
               Outside of academics, I enjoy drawing, weightlifting, exploring nature, and spending quality time with family and friends.
             </p>
-            <h1>agregar links a mis redes</h1>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/linkedin.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={90}
+                />
+              </a>
+              <a href="https://github.com/predye28" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/github.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={90}
+                />
+              </a>
+              <a href="https://www.instagram.com/predyye/" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/instagram.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={90}
+                />
+              </a>
+            </div>
           </section>
           <StaticImage
             src="../images/flor derecha.jpg"
@@ -51,7 +80,7 @@
 
 
       <section id= "skills" className="section">
-        <h3 className="section-subtitle">Skills</h3>
+        <h3 className="section-title">Skills</h3>
         <p className="section-paragraph">
           python
           JavaScript (y frameworks como Node.js)
