@@ -3,6 +3,7 @@
   import { StaticImage } from "gatsby-plugin-image";
   import Header from "../components/Header";
   import Footer from "../components/Footer";
+  import ProjectsSection from "../components/ProjectsSection";
   
   const IndexPage = () => (
     <main>
@@ -78,8 +79,6 @@
         </div>
       </section>
 
-      <br></br>
-      <br></br>
       <section id= "skills" className="section">
         <h3 className="section-title">Skills</h3>
         <div className="skills-links">
@@ -149,20 +148,17 @@
         </div>
 
       </section>
+      
       <br></br>
       <br></br>
-      <section id="projects" className="section">
-      <h2 className="section-title">Projects(falta ordenar y REDISENAR)</h2>
-      <div className="section-paragraph">
-        
-      </div>
-      </section>
 
+      <ProjectsSection />
+
+      <br></br>
+      <br></br>
       <section id="contact" className="section">
-        <h2>leave a messaje:</h2>
-        <p>
-          <a href="mailto:prepredy@gmail.com" className="contact-link">Contact me(FALTA)</a>
-        </p>
+        <h3 className="section-title">Leave a message!</h3>
+        <h2 className="section-subtitle">soon!</h2>
       </section>
 
       <Footer />
