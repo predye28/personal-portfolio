@@ -16,7 +16,7 @@
             className="draw-flower-left"
             placeholder="blurred"
             layout="fixed"
-            width={250}
+            width={300}
           />
           <section id="about" className="section about-section">
             <h1 className="section-title">Hi, Omar here.</h1>
@@ -73,7 +73,7 @@
             className="draw-flower-right"
             placeholder="blurred"
             layout="fixed"
-            width={250}
+            width={300}
           />
         </div>
       </section>
