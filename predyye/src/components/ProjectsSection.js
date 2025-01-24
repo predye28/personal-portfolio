@@ -10,47 +10,13 @@ const projectsData = [
     image: "prueba", 
     link: "https://github.com/predye28/ProyectoDeQA",
   },
-  {
-    title: "app adventure",
-    technologies: "swift, mongodb",
-    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
-    image: "prueba", 
-    link: "https://github.com/predye28/ProyectoDeQA",
-  },
-  {
-    title: "app adventure",
-    technologies: "swift, mongodb",
-    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
-    image: "prueba", 
-    link: "https://github.com/predye28/ProyectoDeQA",
-  },
-  {
-    title: "app adventure",
-    technologies: "swift, mongodb",
-    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
-    image: "prueba", 
-    link: "https://github.com/predye28/ProyectoDeQA",
-  },
-  {
-    title: "app adventure",
-    technologies: "swift, mongodb",
-    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
-    image: "prueba", 
-    link: "https://github.com/predye28/ProyectoDeQA",
-  },
-  {
-    title: "app adventure",
-    technologies: "swift, mongodb",
-    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
-    image: "prueba", 
-    link: "https://github.com/predye28/ProyectoDeQA",
-  },
 ];
 
 const ProjectsSection = () => {
   return (
     <section id="projects" className="section">
       <h2 className="section-title">Projects</h2>
+      <div className="underline"></div>
       <div className="projects-container">
         {projectsData.map((project, index) => (
           <a

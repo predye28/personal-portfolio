@@ -21,6 +21,7 @@
           />
           <section id="about" className="section about-section">
             <h1 className="section-title">Hi, Omar here.</h1>
+            <div className="underline"></div>
             <StaticImage
               src="../images/perfil.jpeg"
               alt="Foto de perfil"
@@ -39,7 +40,7 @@
               Outside of academics, I enjoy drawing, weightlifting, exploring nature, and spending quality time with family and friends.
             </p>
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/omar-madrigal-rodriguez-b15416269/" target="_blank" rel="noopener noreferrer">
                 <StaticImage
                   src="../images/network/linkedin.png"
                   alt="LinkedIn"
@@ -81,8 +82,9 @@
 
       <section id= "skills" className="section">
         <h3 className="section-title">Skills</h3>
+        <div className="underline"></div>
         <div className="skills-links">
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/python.png"
                 alt="python"
@@ -91,7 +93,7 @@
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/js.png"
                 alt="js"
@@ -100,7 +102,7 @@
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/react.png"
                 alt="react"
@@ -109,7 +111,7 @@
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/mysql.png"
                 alt="mysql"
@@ -118,7 +120,7 @@
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/figma.png"
                 alt="figma"
@@ -127,16 +129,16 @@
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
-                src="../images/skills/database.png"
-                alt="database"
+                src="../images/skills/mongodb.png"
+                alt="mongodb"
                 className="skills-icon"
                 placeholder="blurred"
                 quality={100}
               />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/git.png"
                 alt="git"
@@ -158,6 +160,7 @@
       <br></br>
       <section id="contact" className="section">
         <h3 className="section-title">Leave a message!</h3>
+        <div className="underline"></div>
         <h2 className="section-subtitle">soon!</h2>
       </section>
 
