@@ -16,9 +16,11 @@ tendra:
 detalles para arreglar:
 
 - agreagar linea abajo de cada titulo (LISTO)
-- animacion tuanis en el header Y QUE SEA RESPONSIVE
+- animacion tuanis en el header. (listo)
 - la parte animada
-- agregar la parte de leave a message
+- hacer que sea responsive
+- agregar cv al portafolio
+- agregar mi correo en leave a message
 - verificar paleta de colores
 
 

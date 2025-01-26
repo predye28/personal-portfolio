@@ -4,201 +4,193 @@
   --color-secundary: #E9DCBE;
   --color-text: #343434;
   --color-black: #000000;
+  --color-white: #ffffff;
   --color-header: #E9DCBE;
   --color-footer: #717171;
-  --color-background: #F3F3F3  ; 
+  --color-background: #F3F3F3;
+  --font-base: 16px; /* Base para fuentes responsivas */
+  --gap-small: 0.5rem;
+  --gap-medium: 1rem;
+  --gap-large: 2rem;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #ce1a1a;
+  font-size: var(--font-base);
+  color: var(--color-text);
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
 }
 
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Layout General */
 .draw-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem auto;
+  margin: var(--gap-large) auto;
   width: 75%;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .draw-flower-left,
 .draw-flower-right {
-  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .about-section {
-  flex: 1; 
+  flex: 1;
   text-align: center;
-  margin: 0 1rem; /* Espaciado entre las flores y la sección */
-  
+  margin: 0 var(--gap-medium);
 }
 
 .perfil-logo {
-  display: block; 
-  margin: 0 auto; 
-  border-radius: 10%; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: block;
+  margin: 0 auto;
+  border-radius: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .underline {
-  width: 80px; /* Ajusta el ancho de la línea */
-  height: 4px; /* Ajusta el grosor de la línea */
-  background-color: var(--color-secundary); /* Cambia el color según tu diseño */
-  margin: 0 auto; /* Centra la línea */
-  margin-bottom: 1rem;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: var(--color-secundary);
+  margin: 0.5rem auto;
 }
 
 .section {
-  width: 75%; 
-  margin: 0rem auto;
+  width: 75%;
+  margin: 0 auto;
   text-align: center;
-  padding: 0rem 0;
+  padding: var(--gap-medium);
 }
 
 .section-title {
-  padding-top: 1rem;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 250;
   color: var(--color-text);
-  margin-bottom: 0rem;
 }
 
 .section-subtitle {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
   color: var(--color-text);
-  margin-bottom: 1rem;
 }
 
 .section-paragraph {
-  font-size: 14px;
-  margin: 1rem auto;
+  font-size: 0.875rem;
   color: var(--color-text);
   line-height: 1.6;
-  text-align: center;
 }
 
+/* Footer */
 .footer {
-  padding: 0.3rem;
+  padding: var(--gap-small);
   background-color: var(--color-footer);
-  color: #ffffff ; 
+  color: #ffffff;
   text-align: center;
 }
 
 .footer p {
-  margin: 0.5rem 0; 
-  font-size: 12px; 
+  font-size: 0.75rem;
 }
 
-
-.nav {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  width: 100%;
-  padding: 0 1rem; 
-}
-
+/* Header */
 .header {
+  opacity: 0.965;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gap-medium);
   background-color: var(--color-header);
-  color: var(--color-black);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
-}
-.header a{
-  font-size: 18px;
 }
 
-.nav-left {
+.nav {
   display: flex;
-  gap: 1rem; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
+.nav-left,
 .nav-right {
   display: flex;
-  align-items: center; 
-  gap: 0.75rem; 
+  gap: var(--gap-medium);
 }
 
 .nav-link {
-  color: var(--color-light);
+  color: var(--color-text);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
 }
 
 .nav-link:hover {
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
+/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Espaciado entre íconos */
-  margin-top: 2rem;
+  gap: var(--gap-large);
+  margin-top: var(--gap-large);
 }
 
 .social-icon {
-  width: 50px; /* Tamaño del ícono */
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
+/* Skills */
 .skills-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2.5rem;
+  gap: var(--gap-large);
+  margin-top: var(--gap-large);
 }
 
 .skills-icon {
-  width: 70px; 
-  height: 70px;
+  width: 4.375rem;
+  height: 4.375rem;
   transition: transform 0.3s ease;
 }
 
 .skills-icon:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
-/* projects */
-
+/* Projects */
 .projects-container {
   display: flex;
-  overflow-x: auto; /* Habilita el desplazamiento horizontal */
-  gap: 1rem;
-  padding: 1rem ;
-  
+  overflow-x: auto;
+  gap: var(--gap-medium);
+  padding: var(--gap-medium);
 }
 
 .project-card {
   flex: 0 0 auto;
-  width: 250px;
-  background-color: #E9DCBE;
-  border: 1.8px solid #000000;
-  border-radius: 0px;
-  padding: 1rem;
+  width: 15.625rem;
+  background-color: var(--color-secundary);
+  border: 1.8px solid var(--color-black);
+  border-radius: 0.5rem;
+  padding: var(--gap-medium);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   text-decoration: none; /* Elimina subrayados */
@@ -213,110 +205,53 @@ body {
 
 .project-image {
   width: 70%;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: var(--gap-small);
 }
 
 .project-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   color: var(--color-text);
 }
-.project-technologies {
-  font-size: 12px;
-  margin-bottom: 0rem;
-  color: var(--color-text);
-}
+
 .project-description {
-  font-size: 13px;
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text);
+  line-height: 1.5;
 }
 
-.project-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #343434;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-  background-color: #555;
-}
-
-
-
-
-
-/* RESPONSIVE */
-/* Diseño responsive para pantallas pequeñas */
+/* Responsivo */
 @media (max-width: 779px) {
   .draw-container {
-    flex-direction: column; /* Cambia la disposición a vertical */
-    align-items: center; /* Centra los elementos verticalmente */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    margin: 1rem auto; /* Reduce el margen */
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
   }
 
   .draw-flower-left {
-    margin: 1rem 0; /* Añade espacio entre la imagen y el contenido */
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Asegura que la flor izquierda sea visible */
+    width: 150px;
+    height: auto;
   }
 
   .draw-flower-right {
-    display: none; /* Oculta la flor derecha en pantallas pequeñas */
-  }
-
-  .about-section {
-    margin: 1rem; /* Reduce el margen en pantallas pequeñas */
-    text-align: center; /* Mantiene el texto centrado */
-  }
-
-  .perfil-logo {
-    width: 150px; /* Reduce el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
+    display: none;
   }
 
   .section {
-    width: 90%; /* Reduce el ancho de las secciones */
-    padding: 1rem; /* Reduce el relleno */
+    width: 100%;
+    padding: var(--gap-medium);
   }
 
   .section-title {
-    font-size: 28px; /* Reduce el tamaño del título */
+    font-size: 1.75rem;
   }
 
   .section-subtitle {
-    font-size: 18px; /* Reduce el tamaño del subtítulo */
+    font-size: 1.25rem;
   }
 
   .section-paragraph {
-    font-size: 12px; /* Reduce el tamaño del texto */
-  }
-}
-
-/* Ajustes para pantallas medianas */
-@media (min-width: 780px) and (max-width: 1024px) {
-  .draw-container {
-    width: 90%; /* Reduce ligeramente el ancho */
-  }
-
-  .draw-flower-left,
-  .draw-flower-right {
-    width: 200px; /* Ajusta el tamaño de las imágenes */
-  }
-
-  .perfil-logo {
-    width: 200px; /* Ajusta el tamaño de la imagen */
-  }
-
-  .section {
-    width: 80%; /* Ajusta el ancho de las secciones */
+    font-size: 0.875rem;
   }
 }
