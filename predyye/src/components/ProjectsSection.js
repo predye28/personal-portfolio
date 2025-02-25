@@ -10,6 +10,13 @@ const projectsData = [
     image: "prueba", 
     link: "https://github.com/predye28/ProyectoDeQA",
   },
+  {
+    title: "agregar proyecto",
+    technologies: "python",
+    description: "app adventure y se trata de esto y esto y que va de esto y impacta de esta manera",
+    image: "prueba", 
+    link: "https://github.com/predye28/ProyectoDeQA",
+  },
 ];
 
 const ProjectsSection = () => {

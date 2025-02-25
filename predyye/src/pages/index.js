@@ -22,6 +22,7 @@
           <section id="about" className="section about-section">
             <h1 className="section-title">Hi, Omar here.</h1>
             <div className="underline"></div>
+            <p className="line"></p>
             <StaticImage
               src="../images/perfil.jpeg"
               alt="Foto de perfil"
@@ -31,15 +32,37 @@
               width={250}
               quality={100}
             />
+            <p className="line"></p>
             <h2 className="section-subtitle">I create things every day.</h2>
+            <p className="line"></p>
             <p className="section-paragraph">
               Hi! I’m Omar Madrigal, a final-year Computer Engineering student at the Instituto Tecnológico de Costa Rica,
               passionate about real-world projects that create positive impacts through technology. I’m especially interested in artificial intelligence and its potential to drive meaningful change.
             </p>
+            <p className="line"></p>
             <p className="section-paragraph">
               Outside of academics, I enjoy drawing, weightlifting, exploring nature, and spending quality time with family and friends.
             </p>
             <div className="social-links">
+              <a href="mailto:omarmr14.02@gmail.com" className="contact-button">
+                <StaticImage
+                  src="../images/network/email.png" 
+                  alt="Email Icon"
+                  className="social-icon-email"
+                  placeholder="blurred"
+                  quality={100}
+                />
+                <span className="email-text">omarmr14.02@gmail.com</span>
+              </a>
+              <a href="https://drive.google.com/file/d/1PL9TFLcBFsuDakxpUOnJl1zUQcZuxem-/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/network/resume.png" 
+                  alt="CV Omar Madrigal"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={100}
+                />
+              </a>
               <a href="https://www.linkedin.com/in/omar-madrigal-rodriguez-b15416269/" target="_blank" rel="noopener noreferrer">
                 <StaticImage
                   src="../images/network/linkedin.png"
@@ -152,16 +175,70 @@
       </section>
       
       <br></br>
-      <br></br>
 
       <ProjectsSection />
 
-      <br></br>
-      <br></br>
-      <section id="contact" className="section">
-        <h3 className="section-title">Leave a message!</h3>
+
+      <section id="academic" className="section">
+        <h3 className="section-title">Academic</h3>
         <div className="underline"></div>
-        <h2 className="section-subtitle">soon!</h2>
+        <p>soon!</p>
+      </section>
+
+      <section id="contact" className="section">
+        <h3 className="section-title">Contact Me!</h3>
+        <div className="underline"></div>
+        <div className="social-links">
+              <a href="mailto:omarmr14.02@gmail.com" className="contact-button">
+                <StaticImage
+                  src="../images/network/email.png" 
+                  alt="Email Icon"
+                  className="social-icon-email"
+                  placeholder="blurred"
+                  quality={100}
+                />
+                <span className="email-text">omarmr14.02@gmail.com</span>
+              </a>
+              <a href="https://drive.google.com/file/d/1PL9TFLcBFsuDakxpUOnJl1zUQcZuxem-/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/network/resume.png" 
+                  alt="CV Omar Madrigal"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={100}
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/omar-madrigal-rodriguez-b15416269/" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/network/linkedin.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={100}
+                />
+              </a>
+              <a href="https://github.com/predye28" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/network/github.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={100}
+                />
+              </a>
+              <a href="https://www.instagram.com/predyye/" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  src="../images/network/instagram.png"
+                  alt="LinkedIn"
+                  className="social-icon"
+                  placeholder="blurred"
+                  quality={100}
+                />
+              </a>
+            </div>
+
+            <p className="line"></p>
+            <p className="line"></p>
       </section>
 
       <Footer />

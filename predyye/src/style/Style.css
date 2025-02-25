@@ -77,7 +77,12 @@ body {
   color: var(--color-text);
 }
 
+.line{
+  margin-bottom: 1.5rem;
+}
+
 .section-subtitle {
+  
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--color-text);
@@ -158,6 +163,12 @@ body {
   transform: scale(1.1);
 }
 
+.social-icon-email {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
 /* Skills */
 .skills-links {
   display: flex;
@@ -219,6 +230,25 @@ body {
   font-size: 0.875rem;
   color: var(--color-text);
   line-height: 1.5;
+}
+
+.email-text {
+  white-space: nowrap;
+}
+.contact-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secundary);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  gap: 0.5rem;
+  transition: background 0.4s;
+}
+
+.contact-button:hover {
+  background-color:  var(--color-footer);
 }
 
 /* Responsivo */

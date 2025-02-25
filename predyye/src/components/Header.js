@@ -46,13 +46,22 @@ const Header = () => {
             Projects
           </ScrollLink>
           <ScrollLink
+            to="academic"
+            smooth={true}
+            duration={600}
+            offset={-70}
+            className="nav-link"
+          >
+            Academic
+          </ScrollLink>
+          <ScrollLink
             to="contact"
             smooth={true}
             duration={600}
             offset={-70}
             className="nav-link"
           >
-            Leave a message
+            Contact Me!
           </ScrollLink>
         </div>
       </nav>
