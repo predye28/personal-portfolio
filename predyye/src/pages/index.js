@@ -9,17 +9,10 @@
     <main>
       <Header />
 
-      <section id="draw" className="draw-section">
-        <div className="draw-container">
-          <StaticImage
-            src="../images/flor izquierda.jpg"
-            alt="Flor izquierda"
-            className="draw-flower-left"
-            placeholder="blurred"
-            layout="fixed"
-            width={300}
-          />
-          <section id="about" className="section about-section">
+      <section id="main" className="general-section">
+
+
+        <section id="about" className="section about-section">
             <h1 className="section-title">Hi, Omar here.</h1>
             <div className="underline"></div>
             <p className="line"></p>
@@ -92,22 +85,14 @@
               </a>
             </div>
           </section>
-          <StaticImage
-            src="../images/flor derecha.jpg"
-            alt="Flor derecha"
-            className="draw-flower-right"
-            placeholder="blurred"
-            layout="fixed"
-            width={300}
-          />
-        </div>
-      </section>
 
+
+        
       <section id= "skills" className="section">
         <h3 className="section-title">Skills</h3>
         <div className="underline"></div>
         <div className="skills-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.python.org/"  target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/python.png"
                 alt="python"
@@ -125,7 +110,7 @@
                 quality={100}
               />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://es.react.dev/" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src="../images/skills/react.png"
                 alt="react"
@@ -240,6 +225,9 @@
             <p className="line"></p>
             <p className="line"></p>
       </section>
+
+      </section>
+
 
       <Footer />
     </main>
