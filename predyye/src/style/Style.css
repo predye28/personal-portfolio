@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@250;400;500;600;700&display=swap');
 
 :root {
-  --color-secundary: #E9DCBE;
-  --color-text: #343434;
+  --color-secundary: #97b0cc;
+  --color-secundaryAnimation: #4170a1;
+  --color-text: #292929;
+  --color-textHeader: #ffffff;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-header: #E9DCBE;
-  --color-footer: #717171;
-  --color-background: #F3F3F3;
+  --color-header: #242424;
+  --color-footer: #242424;
+  --color-background: #FFFAEC;
   --font-base: 16px; /* Base para fuentes responsivas */
   --gap-small: 0.5rem;
   --gap-medium: 1rem;
@@ -66,7 +68,7 @@ body {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 250;
   color: var(--color-text);
 }
@@ -129,7 +131,7 @@ body {
 }
 
 .nav-link {
-  color: var(--color-text);
+  color: var(--color-textHeader);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.4s ease;
@@ -243,8 +245,51 @@ body {
 }
 
 .contact-button:hover {
-  background-color:  var(--color-footer);
+  background-color:  var(--color-secundaryAnimation);
 }
+
+/* Academic */
+
+.academic-list-container {
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.academic-bullet-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 70%;
+  width: 100%;
+}
+
+.academic-bullet-item {
+  position: relative;
+  padding-left: 0.1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.academic-bullet-item:last-child {
+  margin-bottom: 0;
+}
+
+.academic-bullet-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-footer);
+
+}
+
+
 
 /* Responsivo */
 @media (max-width: 779px) {

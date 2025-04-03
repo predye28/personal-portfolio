@@ -4,6 +4,7 @@
   import Header from "../components/Header";
   import Footer from "../components/Footer";
   import ProjectsSection from "../components/ProjectsSection";
+  import BMLAutomaton from "../components/BMLAutomato";
   
   const IndexPage = () => (
     <main>
@@ -28,6 +29,8 @@
             <p className="line"></p>
             <h2 className="section-subtitle">I create things every day.</h2>
             <p className="line"></p>
+            <BMLAutomaton />
+            <br></br>
             <p className="section-paragraph">
               Hi! I’m Omar Madrigal, a final-year Computer Engineering student at the Instituto Tecnológico de Costa Rica,
               passionate about real-world projects that create positive impacts through technology. I’m especially interested in artificial intelligence and its potential to drive meaningful change.
@@ -164,10 +167,20 @@
       <ProjectsSection />
 
 
+      
+      
       <section id="academic" className="section">
         <h3 className="section-title">Academic</h3>
         <div className="underline"></div>
-        <p>soon!</p>
+        
+        <div className="academic-list-container">
+          <ul className="academic-bullet-list">
+            <li className="academic-bullet-item">
+              Bachelor's Degree in Computer Engineering - Instituto Tecnológico de Costa Rica
+            </li>
+
+          </ul>
+        </div>
       </section>
 
       <section id="contact" className="section">
