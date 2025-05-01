@@ -3,13 +3,14 @@
 :root {
   --color-secundary: #97b0cc;
   --color-secundaryAnimation: #4170a1;
-  --color-text: #292929;
-  --color-textHeader: #ffffff;
+  --color-textTitle: #e6dacce5;
+  --color-text: #e6e2ddd0;
+  --color-textHeader: #e6dacc;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-header: #242424;
-  --color-footer: #242424;
-  --color-background: #FFFAEC;
+  --color-header: #222831;
+  --color-footer: #222831;
+  --color-background: #222831;
   --font-base: 16px; /* Base para fuentes responsivas */
   --gap-small: 0.5rem;
   --gap-medium: 1rem;
@@ -23,6 +24,13 @@ body {
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
+  display: flex; /* Para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+.main-container {
+  width: 80%; /* Limitar el ancho al 70% */
+  margin: 0 auto; /* Centrar el contenedor */
 }
 
 * {
@@ -114,7 +122,7 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .nav {
@@ -133,15 +141,39 @@ body {
 .nav-link {
   color: var(--color-textHeader);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: color 0.4s ease;
   cursor: pointer;
+  font-weight: bold 
+}
+
+.nav-link-name {
+  color: var(--color-textHeader);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.4s ease;
+  cursor: pointer;
+  font-weight: bold 
 }
 
 .nav-link:hover {
-  color: var(--color-white);
+  color: var(--color-secundaryAnimation);
+}
+.contact-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secundary);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  gap: 0.5rem;
+  transition: background 0.4s;
 }
 
+.contact-button:hover {
+  background-color: var(--color-secundaryAnimation);
+}
 /* Social Links */
 .social-links {
   display: flex;
@@ -160,6 +192,15 @@ body {
   transform: scale(1.1);
 }
 
+.social-icon-header {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icon-header:hover {
+  transform: scale(1.1);
+}
 .social-icon-email {
   width: 2rem;
   height: 2rem;
