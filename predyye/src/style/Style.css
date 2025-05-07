@@ -3,7 +3,7 @@
 :root {
   --color-secundary: #EAD8B1;
   --color-secundaryAnimation: #EAD8B1;
-  --color-textWordEspecial: #EAD8B1;
+  --color-textWordEspecial: #fadc9c;
   --color-text: #e6e2ddd0;
   --color-textTitleAndSubtitle: #e6e2dd;
   --color-textHeader: #eeeeee;
@@ -12,6 +12,7 @@
   --color-header: #001F3F;
   --color-footer: #001F3F;
   --color-background: #001F3F;
+  --color-backgroundProject: #002952;
   --font-base: 16px; /* Base para fuentes responsivas */
   --gap-small: 0.5rem;
   --gap-medium: 1rem;
@@ -256,49 +257,75 @@ body {
 }
 
 /* Projects */
-.projects-container {
-  display: flex;
-  overflow-x: auto;
-  gap: var(--gap-medium);
-  padding: var(--gap-medium);
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .project-card {
-  flex: 0 0 auto;
-  width: 15.625rem;
-  background-color: var(--color-secundary);
-  border: 1.8px solid var(--color-black);
-  border-radius: 0.5rem;
-  padding: var(--gap-medium);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  text-decoration: none; /* Elimina subrayados */
-  color: inherit; /* Mantiene el color del texto */
+  background-color:  var(--color-backgroundProject); /* Dark blue background like in your image */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  color: var(--color-text);
+  min-height: 250px;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.project-image {
-  width: 70%;
-  border-radius: 0.25rem;
-  margin-bottom: var(--gap-small);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-title {
-  font-size: 1.125rem;
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  color: var(--color-textTitleAndSubtitle);
 }
 
 .project-description {
-  font-size: 0.875rem;
-  color: var(--color-text);
+  font-size: 0.9rem;
   line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
+
+.project-technologies {
+  font-size: 0.9rem;
+  color: var(--color-secundary);
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.project-links a {
+  color: var(--color-textTitleAndSubtitle);
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: var(--color-secundary);
+}
+
 
 .email-text {
   white-space: nowrap;
@@ -320,37 +347,20 @@ body {
 }
 
 
-/* Responsivo */
-@media (max-width: 779px) {
-  .draw-container {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .draw-flower-left {
-    width: 150px;
-    height: auto;
+@media (max-width: 1023px) and (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .draw-flower-right {
-    display: none;
-  }
-
-  .section {
-    width: 100%;
-    padding: var(--gap-medium);
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .section-subtitle {
-    font-size: 1.25rem;
-  }
-
-  .section-paragraph {
-    font-size: 0.875rem;
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

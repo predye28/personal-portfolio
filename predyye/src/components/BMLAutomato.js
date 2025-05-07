@@ -7,16 +7,16 @@ const BMLAutomaton = () => {
   const animationRef = useRef(null);
   const gridRef = useRef(null);
 
-  const ROWS = 80;
-  const COLS = 280;
+  const ROWS = 120;
+  const COLS = 500;
   const EMPTY_PERCENTAGE = 60;
   const MAX_ITERATIONS = 1800;
-  const CELL_SIZE = 1.5;
+  const CELL_SIZE = 1;
   const FRAME_RATE = 60; 
    
   const backgroundColor = '#001F3F';
-  const RED_COLOR = '#000000';  // Color para las celdas rojas
-  const BLUE_COLOR = '#EAD8B1';
+  const RED_COLOR = '#000000';  
+  const BLUE_COLOR = '#e6e2dd';
 
   const EMPTY = 0;
   const RED = 1;  
