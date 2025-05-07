@@ -10,37 +10,77 @@ const IndexPage = () => (
   <main>
     <Header />
     <div className="main-container">
+
       <section id="main" className="general-section">
+
         <section id="about" className="section about-section">
-          <h1 className="section-title">Hi, Omar here.</h1>
-          <div className="underline"></div>
+
+        <br></br>
+        <br></br>
+        <br></br> {/* CLEAN CODE */}
+        <br></br>
+        <br></br>
+        <br></br>
+
           <p className="line"></p>
-          <h2 className="section-subtitle">I create things every day.</h2>
+          <h1 className="section-title">Hi, <span className="highlight">Omar</span> here.</h1>    {/* ANIMAR ESTO*/}
+          <h2 className="section-word">I create things every day.</h2>
           <p className="line"></p>
+
           <BMLAutomaton />
+
           <br></br>
-          <p className="section-paragraph">
-            Hi! I’m Omar Madrigal, a final-year Computer Engineering student at
-            the Instituto Tecnológico de Costa Rica, passionate about real-world
-            projects that create positive impacts through technology. I’m
-            especially interested in artificial intelligence and its potential
-            to drive meaningful change.
-          </p>
-          <p className="line"></p>
-          <p className="section-paragraph">
-            Outside of academics, I enjoy drawing, weightlifting, exploring
-            nature, and spending quality time with family and friends.
-          </p>
-          <div className="social-links">
-            <a href="mailto:omarmr14.02@gmail.com" className="contact-button">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <h3 className="section-subtitle">About Me</h3>
+          <div className="underline"></div>
+
+          <div className="about-container">
+          <div className="about-image">
               <StaticImage
-                src="../images/network/email.png"
-                alt="Email Icon"
-                className="social-icon-email"
+                src="../images/perfil.jpeg" 
+                alt="Omar Madrigal"
+                className="profile-image"
                 placeholder="blurred"
                 quality={100}
               />
-              <span className="email-text">omarmr14.02@gmail.com</span>
+            </div>
+            <div className="about-text">
+              <p className="section-paragraph">
+                Hi! I’m Omar Madrigal, a final-year Computer Engineering student at
+                the <span className="highlight">Instituto Tecnológico de Costa Rica</span>, passionate about real-world
+                projects that create positive impacts through technology. I’m
+                especially interested in artificial intelligence and its potential
+                to drive meaningful change.
+              </p>
+              <p className="line"></p>
+              <p className="section-paragraph">
+                Outside of academics, I enjoy drawing, weightlifting, exploring
+                nature, and spending quality time with family and friends.
+              </p>
+            </div>
+            
+          </div>
+
+          <div className="social-links">
+
+            
+            <a
+              href="mailto:omarmr14.02@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StaticImage
+                src="../images/network/email.png"
+                alt="email icon"
+                className="social-icon"
+                placeholder="blurred"
+                quality={100}
+              />
             </a>
             <a
               href="https://drive.google.com/file/d/1PL9TFLcBFsuDakxpUOnJl1zUQcZuxem-/view?usp=sharing"
@@ -99,7 +139,7 @@ const IndexPage = () => (
         </section>
 
         <section id="skills" className="section">
-          <h3 className="section-title">Skills</h3>
+          <h3 className="section-subtitle">Skills</h3>
           <div className="underline"></div>
           <div className="skills-links">
             <a
@@ -180,19 +220,7 @@ const IndexPage = () => (
 
         <ProjectsSection />
 
-        <section id="academic" className="section">
-          <h3 className="section-title">Academic</h3>
-          <div className="underline"></div>
-
-          <div className="academic-list-container">
-            <ul className="academic-bullet-list">
-              <li className="academic-bullet-item">
-                Bachelor's Degree in Computer Engineering - Instituto
-                Tecnológico de Costa Rica
-              </li>
-            </ul>
-          </div>
-        </section>
+        
 
         
       </section>

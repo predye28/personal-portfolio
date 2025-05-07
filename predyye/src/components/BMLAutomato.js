@@ -7,15 +7,16 @@ const BMLAutomaton = () => {
   const animationRef = useRef(null);
   const gridRef = useRef(null);
 
-  const ROWS = 40;
-  const COLS = 200;
+  const ROWS = 80;
+  const COLS = 280;
   const EMPTY_PERCENTAGE = 60;
   const MAX_ITERATIONS = 1800;
-  const CELL_SIZE = 2;
-  const FRAME_RATE = 30; 
+  const CELL_SIZE = 1.5;
+  const FRAME_RATE = 60; 
    
-  const RED_COLOR = '#eee4d9e5';  // Color para las celdas rojas
-  const BLUE_COLOR = '#97b0cc';
+  const backgroundColor = '#001F3F';
+  const RED_COLOR = '#000000';  // Color para las celdas rojas
+  const BLUE_COLOR = '#EAD8B1';
 
   const EMPTY = 0;
   const RED = 1;  
@@ -176,16 +177,18 @@ const BMLAutomaton = () => {
   return (
     <div className="bml-automaton">
       
-      <div className="bml-canvas-container">
+      <div className="bml-canvas-container" >
         <canvas 
           ref={canvasRef} 
           style={{ 
             border: '1px solid #333',
             maxWidth: '100%',
-            height: 'auto'
+            height: 'auto',
+            background: backgroundColor
           }}
         />
       </div>
+      
       
     </div>
   );
