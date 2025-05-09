@@ -10,10 +10,10 @@ const projectsData = [
     externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
   },
   {
-    title: "BiblioTec",
-    description: "An page para la biblioteca de el tecnologio de Costa Rica, gestionando las reservas de los cubiculos de los estudiando, creada el front con React + Vue, y el backend con firebase",
-    technologies: "React + Vue, Firebase",
-    githubLink: "https://github.com/Jeremy-mfs/BiblioTec",
+    title: "Personal Portfolio",  
+    description: "A responsive portfolio site built with Gatsby to showcase projects and skills.",
+    technologies: "Gatsby, React, GraphQL",
+    githubLink: "https://github.com/predye28/personal-portfolio",
     externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
   },
   {
@@ -35,6 +35,7 @@ const projectsData = [
 
 const ProjectCard = ({ project }) => {
   return (
+    
     <div className="project-card">
       <h3 className="project-title">{project.title}</h3>
       <p className="project-description">{project.description}</p>
@@ -60,6 +61,7 @@ const ProjectCard = ({ project }) => {
 const ProjectsSection = () => {
   return (
     <section id="projects" className="section">
+      <div className="section-spacing" />
       <h2 className="section-subtitle">Projects</h2>
       <div className="underline"></div>
       <div className="projects-grid">

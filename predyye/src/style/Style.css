@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@250;400;500;600;700&display=swap');
 
+/* Variables globales */
 :root {
   --color-secundary: #EAD8B1;
   --color-secundaryAnimation: #EAD8B1;
@@ -13,10 +14,17 @@
   --color-footer: #001F3F;
   --color-background: #001F3F;
   --color-backgroundProject: #002952;
-  --font-base: 16px; /* Base para fuentes responsivas */
+  --font-base: 16px;
   --gap-small: 0.5rem;
   --gap-medium: 1rem;
   --gap-large: 2rem;
+}
+
+/* Reset y estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -26,21 +34,21 @@ body {
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
-  display: flex; /* Para centrar el contenido */
-  justify-content: center; /* Centrar horizontalmente */
+  display: flex;
+  justify-content: center;
 }
 
 .main-container {
-  width: 80%; /* Limitar el ancho al 70% */
-  margin: 0 auto; /* Centrar el contenedor */
+  width: 80%;
+  margin: 0 auto;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.section-spacing {
+  margin: 3rem 0;
 }
-
+.section-spacingBig {
+  margin-top: 10rem;
+}
 /* Layout General */
 .general-section {
   justify-content: space-between;
@@ -50,42 +58,36 @@ body {
   margin-top: 4rem;
 }
 
-
-.about-section {
-  flex: 1;
-  text-align: center;
-  margin: 0 var(--gap-medium);
-}
-
+/* About Section */
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-large); /* Espacio entre el texto y la imagen */
+  gap: var(--gap-large);
   margin-top: var(--gap-large);
 }
 
 .about-text {
-  flex: 1; /* El texto ocupa el espacio disponible */
+  flex: 1;
   text-align: left;
 }
 
 .about-image {
-  flex: 0 0 40%; /* La imagen ocupa el 40% del ancho del contenedor */
+  flex: 0 0 40%;
   display: flex;
   justify-content: center;
 }
 
 .profile-image {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  max-width: 300px; /* Tamaño máximo de la imagen */
-  border-radius: 4%; /* Hace la imagen circular */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .highlight {
-  color: var(--color-textWordEspecial); 
-  font-weight: 500; 
+  color: var(--color-textWordEspecial);
+  font-weight: 500;
 }
 
 .underline {
@@ -107,7 +109,7 @@ body {
   color: var(--color-textTitleAndSubtitle);
 }
 
-.line{
+.line {
   margin-bottom: 1.5rem;
 }
 
@@ -133,7 +135,7 @@ body {
 .footer {
   padding: var(--gap-small);
   background-color: var(--color-footer);
-  color: #ffffff;
+  color: var(--color-white);
   text-align: center;
 }
 
@@ -153,7 +155,6 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-
 }
 
 .nav {
@@ -175,9 +176,12 @@ body {
   font-size: 0.9rem;
   transition: color 0.4s ease;
   cursor: pointer;
-  font-weight: bold 
+  font-weight: bold;
 }
 
+.nav-link:hover {
+  color: var(--color-secundaryAnimation);
+}
 .nav-link-name {
   color: var(--color-textHeader);
   text-decoration: none;
@@ -187,9 +191,7 @@ body {
   font-weight: bold 
 }
 
-.nav-link:hover {
-  color: var(--color-secundaryAnimation);
-}
+/* Contact Button */
 .contact-button {
   display: flex;
   align-items: center;
@@ -205,6 +207,7 @@ body {
 .contact-button:hover {
   background-color: var(--color-secundaryAnimation);
 }
+
 /* Social Links */
 .social-links {
   display: flex;
@@ -269,7 +272,7 @@ body {
 }
 
 .project-card {
-  background-color:  var(--color-backgroundProject); /* Dark blue background like in your image */
+  background-color: var(--color-backgroundProject);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -286,6 +289,7 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 .project-title {
   margin-top: 0.75rem;
@@ -330,6 +334,7 @@ body {
 .email-text {
   white-space: nowrap;
 }
+
 .contact-button {
   display: flex;
   align-items: center;
@@ -347,6 +352,7 @@ body {
 }
 
 
+/* Media Queries */
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
