@@ -153,27 +153,6 @@ const BMLAutomaton = () => {
     }
   }, [isRunning]);
 
-  const toggleSimulation = () => {
-    setIsRunning(prev => !prev);
-  };
-
-  const resetSimulation = () => {
-    setIsRunning(false);
-    if (animationRef.current) {
-      clearTimeout(animationRef.current);
-    }
-    setIteration(0);
-    
-    if (typeof window !== 'undefined') {
-      gridRef.current = initializeGrid();
-      const canvas = canvasRef.current;
-      if (canvas) {
-        const ctx = canvas.getContext('2d');
-        drawGrid(gridRef.current, ctx);
-      }
-    }
-  };
-
   return (
     <div className="bml-automaton">
       

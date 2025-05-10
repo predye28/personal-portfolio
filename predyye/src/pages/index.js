@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../style/Style.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Header from "../components/Header";
@@ -28,53 +28,75 @@ const IndexPage = () => (
  * About section component with profile details
  * @returns {JSX.Element} The rendered about section
  */
-const AboutSection = () => (
-  <section id="about" className="section about-section">
+const AboutSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-    <div className="section-spacingBig" />
+  // Add window resize listener to detect mobile view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
     
-    <p className="line"></p>
-    <h1 className="section-title">Hi, <span className="highlight">Omar</span> here.</h1>
-    <h2 className="section-word">I create things every day.</h2>
-    <p className="line"></p>
-
-    <BMLAutomaton />
+    // Set initial value
+    handleResize();
     
-
-    <div className="section-spacingBig" />
-    <h3 className="section-subtitle">About Me</h3>
+    // Add event listener
+    window.addEventListener("resize", handleResize);
     
-    <div className="underline"></div>
+    // Clean up
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-    <div className="about-container">
-      <div className="about-image">
-        <StaticImage
-          src="../images/perfil.jpeg" 
-          alt="Omar Madrigal"
-          className="profile-image"
-          placeholder="blurred"
-          quality={100}
-        />
+  return (
+    <section id="about" className="section about-section">
+      <div className="section-spacingBig" />
+      
+      <p className="line"></p>
+      <h1 className="section-title">Hi, <span className="highlight">Omar</span> here.</h1>
+      <h2 className="section-word">I create things every day.</h2>
+      <p className="line"></p>
+
+      <BMLAutomaton />
+      
+      <div className="section-spacingBig" />
+      <h3 className="section-subtitle">About Me</h3>
+      
+      <div className="underline"></div>
+
+      <div className="about-container">
+        {!isMobile && (
+          <div className="about-image">
+            <StaticImage
+              src="../images/perfil.jpeg" 
+              alt="Omar Madrigal"
+              className="profile-image"
+              placeholder="blurred"
+              quality={100}
+            />
+          </div>
+        )}
+        <div className="about-text">
+          <p className="section-paragraph">
+            Hi! I'm Omar Madrigal, a final-year Computer Engineering student at
+            the <span className="highlight">Instituto Tecnológico de Costa Rica</span>, passionate about real-world
+            projects that create positive impacts through technology. I'm
+            especially interested in artificial intelligence and its potential
+            to drive meaningful change.
+          </p>
+          <p className="line"></p>
+          <p className="section-paragraph">
+            Outside of academics, I enjoy drawing, weightlifting, exploring
+            nature, and spending quality time with family and friends.
+          </p>
+        </div>
       </div>
-      <div className="about-text">
-        <p className="section-paragraph">
-          Hi! I'm Omar Madrigal, a final-year Computer Engineering student at
-          the <span className="highlight">Instituto Tecnológico de Costa Rica</span>, passionate about real-world
-          projects that create positive impacts through technology. I'm
-          especially interested in artificial intelligence and its potential
-          to drive meaningful change.
-        </p>
-        <p className="line"></p>
-        <p className="section-paragraph">
-          Outside of academics, I enjoy drawing, weightlifting, exploring
-          nature, and spending quality time with family and friends.
-        </p>
-      </div>
-    </div>
-    
-    <SocialLinks />
-  </section>
-);
+      
+      <SocialLinks />
+    </section>
+  );
+};
 
 /**
  * Skills section component
@@ -158,7 +180,6 @@ const SkillsSection = () => (
  * @returns {JSX.Element} The rendered social links
  */
 const SocialLinks = () => (
-  
   <div className="social-links">
     <a href="mailto:omarmr14.02@gmail.com" target="_blank" rel="noopener noreferrer">
       <StaticImage
