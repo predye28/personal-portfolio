@@ -16,20 +16,6 @@ const projectsData = [
     githubLink: "https://github.com/predye28/personal-portfolio",
     externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
   },
-  {
-    title: "BiblioTec",
-    description: "An page para la biblioteca de el tecnologio de Costa Rica, gestionando las reservas de los cubiculos de los estudiando, creada el front con React + Vue, y el backend con firebase",
-    technologies: "React + Vue, Firebase",
-    githubLink: "https://github.com/Jeremy-mfs/BiblioTec",
-    externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
-  },
-  {
-    title: "BiblioTec",
-    description: "An page para la biblioteca de el tecnologio de Costa Rica, gestionando las reservas de los cubiculos de los estudiando, creada el front con React + Vue, y el backend con firebase",
-    technologies: "React + Vue, Firebase",
-    githubLink: "https://github.com/Jeremy-mfs/BiblioTec",
-    externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
-  },
  
 ];
 
