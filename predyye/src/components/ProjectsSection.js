@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Style.css";
+import { useInView } from 'react-intersection-observer';
 
 const projectsData = [
   {
@@ -16,13 +17,44 @@ const projectsData = [
     githubLink: "https://github.com/predye28/personal-portfolio",
     externalLink: "https://tecdigital.tec.ac.cr/dotlrn/index",
   },
- 
 ];
 
-const ProjectCard = ({ project }) => {
+/**
+ * Animated Section wrapper component
+ * @param {Object} props Component props
+ * @param {React.ReactNode} props.children Child components
+ * @param {string} props.className Additional CSS classes
+ * @param {Object} props.style Additional inline styles
+ * @returns {JSX.Element} The animated section wrapper
+ */
+const AnimatedSection = ({ children, className = '', style = {}, ...props }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+    rootMargin: '-50px 0px',
+  });
+
   return (
-    
-    <div className="project-card">
+    <div 
+      ref={ref} 
+      className={`fade-in-up ${inView ? 'visible' : ''} ${className}`}
+      style={style}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
+
+const ProjectCard = ({ project, index }) => {
+  // Calculamos un retraso escalonado basado en el índice del proyecto
+  // Esto hace que cada tarjeta aparezca después de la anterior
+  const staggerDelay = {
+    transitionDelay: `${0.2 * index}s`,
+  };
+  
+  return (
+    <AnimatedSection className="project-card" style={staggerDelay}>
       <h3 className="project-title">{project.title}</h3>
       <p className="project-description">{project.description}</p>
       <p className="project-technologies">{project.technologies}</p>
@@ -40,7 +72,7 @@ const ProjectCard = ({ project }) => {
           </svg>
         </a>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 
@@ -48,13 +80,17 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="section">
       <div className="section-spacing" />
-      <h2 className="section-subtitle">Projects</h2>
-      <div className="underline"></div>
-      <div className="projects-grid">
+      
+      <AnimatedSection>
+        <h2 className="section-subtitle">Projects</h2>
+        <div className="underline"></div>
+      </AnimatedSection>
+      
+      <AnimatedSection className="projects-grid" style={{ transitionDelay: '0.1s' }}>
         {projectsData.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} index={index} />
         ))}
-      </div>
+      </AnimatedSection>
     </section>
   );
 };

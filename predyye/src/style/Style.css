@@ -2,9 +2,9 @@
 
 /* Variables globales */
 :root {
-  --color-secundary: #EAD8B1;
+  --color-secundary: #f0c567;
   --color-secundaryAnimation: #EAD8B1;
-  --color-textWordEspecial: #fadc9c;
+  --color-textWordEspecial: #f0c567;
   --color-text: #e6e2ddd0;
   --color-textTitleAndSubtitle: #e6e2dd;
   --color-textHeader: #eeeeee;
@@ -266,23 +266,64 @@ body {
 }
 
 /* Skills */
-.skills-links {
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 30px auto;
+  max-width: 100%;
+  padding: 0 10px;
+  transition-delay: 0.1s;
+}
+
+.skill-card {
+  background-color: var(--color-backgroundProject);
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.skill-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-header {
   display: flex;
-  justify-content: center;
-  gap: var(--gap-large);
-  margin-top: var(--gap-large);
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.skills-icon {
-  width: 4rem;
-  height: 4rem;
-  transition: transform 0.3s ease;
+.skill-arrow-img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px;
 }
 
-.skills-icon:hover {
-  transform: scale(1.1);
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-textTitleAndSubtitle);
+  letter-spacing: 0.5px;
 }
 
+.skill-desc {
+  font-size: 0.9rem;
+  color: var(--color-secundary);
+  margin-left: 30px;
+  line-height: 1.4;
+}
 /* Projects */
 .projects-grid {
   display: grid;
@@ -294,6 +335,8 @@ body {
   margin-right: auto;
   padding: 0 1rem;
 }
+
+
 
 .project-card {
   background-color: var(--color-backgroundProject);
@@ -354,6 +397,27 @@ body {
   color: var(--color-secundary);
 }
 
+.projects-grid .project-card.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projects-grid .project-card.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Refinamiento para la animación del título y línea de sección */
+#projects .section-subtitle.fade-in-up,
+#projects .underline.fade-in-up {
+  transition-delay: 0.1s;
+}
+
+/* Añadir un pequeño retraso a la grid de proyectos para que primero aparezca el título */
+.projects-grid.fade-in-up {
+  transition-delay: 0.2s;
+}
 
 .email-text {
   white-space: nowrap;
@@ -375,6 +439,30 @@ body {
   background-color:  var(--color-secundaryAnimation);
 }
 
+/* Animaciones */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Puedes ajustar la duración y el timing para diferentes elementos */
+.about-image.fade-in-up {
+  transition-delay: 0.2s;
+}
+
+.about-text.fade-in-up {
+  transition-delay: 0.3s;
+}
+
+.skills-links.fade-in-up {
+  transition-delay: 0.1s;
+}
 
 /* Media Queries */
 @media (min-width: 1024px) {
@@ -403,10 +491,15 @@ body {
 }
 
 @media (max-width: 767px) {
+  .fade-in-up {
+    transform: translateY(20px); /* Menor distancia en móviles */
+  }
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+ 
+  /* Espaciado específico para proyectos en móviles */
+
   .main-container {
     width: 95%;
   }
@@ -441,15 +534,12 @@ body {
     line-height: 1.5;
   }
   
-  .skills-links {
-    gap: var(--gap-medium);
-    flex-wrap: wrap;
-    justify-content: center;
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
   
-  .skills-icon {
-    width: 3rem;
-    height: 3rem;
+  .skill-name {
+    font-size: 1.1rem;
   }
   
   /* About section responsive */
@@ -520,9 +610,27 @@ body {
     height: 2.5rem;
   }
   
-  .skills-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    padding: 15px;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+  }
+  
+  .skill-desc {
+    font-size: 0.8rem;
+    margin-left: 25px;
+  }
+  
+  .skill-arrow-img {
+    width: 16px !important;
+    height: 16px !important;
   }
   
   .section-spacingBig {
