@@ -302,7 +302,6 @@ body {
 .skill-header {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 }
 
 .skill-arrow-img {
@@ -312,8 +311,7 @@ body {
 }
 
 .skill-name {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   color: var(--color-textTitleAndSubtitle);
   letter-spacing: 0.5px;
 }

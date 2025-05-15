@@ -139,8 +139,11 @@ const AboutSection = () => {
               src="../images/perfil.jpeg" 
               alt="Omar Madrigal"
               className="profile-image"
-              placeholder="blurred"
-              quality={100}
+              placeholder="dominantColor"
+              quality={95}
+              width={280}
+              height={280}
+              objectFit="cover"
             />
           </AnimatedSection>
         )}
@@ -176,11 +179,9 @@ const SkillsSection = () => {
   // List of skills to display with descriptions
   const skills = [
     { name: "Python"},
-    { name: "JavaScript"},
     { name: "React"},
     { name: "MySQL"},
     { name: "Figma"},
-    { name: "MongoDB"},
     { name: "Git"}
   ];
 
@@ -221,10 +222,12 @@ const SkillsSection = () => {
                 src="../images/skills/python.png"
                 alt="React icon"
                 className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
+                placeholder="dominantColor"
+                formats={["webp", "avif", "png"]}
+                quality={95}
+                width={32}
+                height={32}
+                objectFit="contain"
               />
             )}
             <span className="skill-name">{skills[0].name}</span>
@@ -235,13 +238,14 @@ const SkillsSection = () => {
           <div className="skill-header">
             {!isMobile && (
               <StaticImage
-                src="../images/skills/js.png"
+                src="../images/skills/react.png"
                 alt="React icon"
                 className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
+                formats={["webp", "avif", "png"]}
+                quality={95}
+                width={32}
+                height={32}
+                objectFit="contain"
               />
             )}
             <span className="skill-name">{skills[1].name}</span>
@@ -252,13 +256,14 @@ const SkillsSection = () => {
           <div className="skill-header">
             {!isMobile && (
               <StaticImage
-                src="../images/skills/react.png"
+                src="../images/skills/mysql.png"
                 alt="React icon"
                 className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
+                formats={["webp", "avif", "png"]}
+                quality={95}
+                width={32}
+                height={32}
+                objectFit="contain"
               />
             )}
             <span className="skill-name">{skills[2].name}</span>
@@ -269,33 +274,17 @@ const SkillsSection = () => {
           <div className="skill-header">
             {!isMobile && (
               <StaticImage
-                src="../images/skills/mysql.png"
-                alt="React icon"
-                className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
-              />
-            )}
-            <span className="skill-name">{skills[3].name}</span>
-          </div>
-        </div>
-
-        <div className="skill-card">
-          <div className="skill-header">
-            {!isMobile && (
-              <StaticImage
                 src="../images/skills/figma.png"
                 alt="React icon"
                 className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
+                formats={["webp", "avif", "png"]}
+                quality={95}
+                width={32}
+                height={32}
+                objectFit="contain"
               />
             )}
-            <span className="skill-name">{skills[4].name}</span>
+            <span className="skill-name">{skills[3].name}</span>
           </div>
         </div>
 
@@ -307,13 +296,14 @@ const SkillsSection = () => {
                 src="../images/skills/git.png"
                 alt="React icon"
                 className="skill-icon"
-                placeholder="blurred"
-                quality={100}
-                width={24}
-                height={24}
+                formats={["webp", "avif", "png"]}
+                quality={95}
+                width={32}
+                height={32}
+                objectFit="contain"
               />
             )}
-            <span className="skill-name">{skills[6].name}</span>
+            <span className="skill-name">{skills[4].name}</span>
           </div>
         </div>
       </AnimatedSection>
